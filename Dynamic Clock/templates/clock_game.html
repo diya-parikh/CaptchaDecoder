@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock Security System</title>
+    <!-- Load CSS for Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        canvas {
+            border: 2px solid #4CAF50;
+            background-color: #fff;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .success-message {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to Clock Security System 🕒</h1>
+
+<h2>Set the time to: {{ target_hour }}:{{ "%02d"|format(target_minute) }}</h2>
+
+<!-- Hidden form to submit user-set time -->
+<form id="time-form" action="/verify_time" method="POST">
+    <input type="hidden" name="target_hour" value="{{ target_hour }}">
+    <input type="hidden" name="target_minute" value="{{ target_minute }}">
+    <input type="hidden" id="user_hour" name="user_hour" value="0">
+    <input type="hidden" id="user_minute" name="user_minute" value="0">
+</form>
+
+<!-- Clock Canvas -->
+<canvas id="clockCanvas" width="400" height="400"></canvas>
+
+<br>
+<!-- Buttons to move the hands -->
+<button onclick="moveHour()">Move Hour Hand</button>
+<button onclick="moveMinute()">Move Minute Hand</button>
+<button onclick="submitTime()">Submit Time</button>
+
+<p id="result" class="result-message"></p>
+
+<!-- Load JavaScript AFTER the canvas is created -->
+<script src="{{ url_for('static', filename='clock_game.js') }}"></script>
+
+</body>
+</html>
+
