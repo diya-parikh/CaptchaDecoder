@@ -21,3 +21,19 @@ This project is divided into two parts:
 - Interaction validated via user input rather than simple image recognition.
 - Resilient against CNN-based attacks and OCR tools like Tesseract.
 - Combines **human intuition and interaction** to create a secure authentication step.
+
+## Tech Stack - 
+
+### AI and Machine Learning
+- **Python**
+- **TensorFlow / Keras** – For training CNN models
+- **OpenCV** – Image preprocessing
+
+### Web Application
+- **HTML, CSS, JavaScript** – Frontend for the interactive clock CAPTCHA
+- **Canvas API** – For rendering and interacting with the analog clock
+- **Flask (Python)** – Backend for serving the CAPTCHA challenge and handling user validation
+
+## Conclusion
+
+This project demonstrates the increasing vulnerability of traditional CAPTCHA systems against modern AI and proposes a novel, human-centric solution. The interactive canvas clock CAPTCHA resists AI-driven attacks by incorporating user interaction that is difficult for machines to simulate, offering a **secure and intuitive alternative** to outdated CAPTCHA formats.
