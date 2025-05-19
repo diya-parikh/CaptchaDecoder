@@ -9,7 +9,7 @@ This project is divided into two parts:
 1. **CAPTCHA Decoding**: Using Convolutional Neural Networks (CNNs) like MobileNetV2 and Xception to decode standard alphanumeric CAPTCHAs.
 2. **AI-Resistant Countermeasure**: Proposing and implementing a novel **canvas clock CAPTCHA** that requires users to set the correct time on an interactive analog clock—something difficult for bots to solve.
 
-## Key Features : 
+## Key Features 
 
 ### CAPTCHA Decoding using AI
 - Train and evaluate CNN models to decode traditional alphanumeric CAPTCHA images.
@@ -22,7 +22,7 @@ This project is divided into two parts:
 - Resilient against CNN-based attacks and OCR tools like Tesseract.
 - Combines **human intuition and interaction** to create a secure authentication step.
 
-## Tech Stack - 
+## Tech Stack  
 
 ### AI and Machine Learning
 - **Python**
